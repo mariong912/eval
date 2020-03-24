@@ -11,6 +11,8 @@ import matplotlib.pyplot as plt
 
 d = {'A' : [14.5, 14., 16., 12.],     
      'B' : [11., 12., 16., 18.]} 
+# Notes dans une matiere des etudiants A et B
+
 df = pd.DataFrame(d) 
 print(df)
 
