@@ -9,31 +9,18 @@ Created on Mon Mar 23 15:14:39 2020
 # Ensuite on cherche à regarder les 2 séries pour enfin les représenter graphiquements
 """
 def poly(L,val):
-
     s=0
-
     for deg,coef in enumerate(L):
-
         s=s+ coef*val**deg
-
     return (s)
-
 rep ="non"
-
 while rep!="oui":
-
     polynome = []
-
     degre=int(input("Donne le degré : "))
-
     for i in range(degre+1):
-
         polynome.append(float(input("donne le coef ")))
-
     val_x=float(input("Donnez votre valeur "))
-
     print(" P(x) = ", poly(polynome, val_x))
-
     rep=input("voulez-vous continuez ? ")
 
 # On cherche à créer 2 listes des résultats des fonctions polunomiales simulées précédemment
