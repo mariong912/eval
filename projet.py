@@ -6,8 +6,8 @@ Created on Mon Mar 23 15:14:39 2020
 """
 # A partir de la création d'une fonction qui permet de vréer des polynomes de n'importe quels degrés (simulation)
 # On intégre ces valeurs à un dictionnaires à partir des données (résultats de la fontion) de 2 listes
-# Ensuite on cherche à regarder les 2 séries pour enfin les représenter graphiquements
-"""
+# Ensuite on cherche à regarder les 2 séries pour enfin les représenter graphiquement
+
 def poly(L,val):
     s=0
     for deg,coef in enumerate(L):
