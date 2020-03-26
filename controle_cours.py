@@ -10,104 +10,100 @@ Created on Thu Mar 26 15:30:31 2020
 
 # Question 1 :
 
-def sup21(chiffre):
-    chiffre
-    if chiffre >= 21 :
-            print("True")
-    else :
-            print("False")
-sup21(21)
+def sup21(x):
+    """
+    >>> sup21(21)
+    True
+    >>> sup21(2)
+    False
+    """
+    return x>=21
 
 
 # Question 2 :
 
-def pairs (liste1):
-    for i in len(liste1) :
-        i=liste1[i]%2
-        if i==0: 
-            liste2 += liste1[i]
-        else : 
-            liste2
-
-pairs([1,2,3])
+def pairs(x):
+    """
+    >>> pairs([1,2,3])
+    [2]
+    """
+    return [i for i in x if i%2==0]
 
 
 # Question 3 :
 
-
-def ajout4(liste):
-    liste.append(4)
-    print(liste)
-    
-
-ajout4([1,2])
+def ajout4(x):
+    """
+    >>> ajout4([])
+    [4]
+    >>> ajout4([1,2,4])
+    [1, 2, 4, 4]
+    >>> l = [1,2,3]
+    >>> _ = ajout4(l)
+    >>> l
+    [1, 2, 3]
+    """
+    return x+[4]
 
 
 # Question 4 :
-
     
-def to_strings(dico):
-    l=[]
-    for i,j in dico.items():
-        l+=[i,':',j]
-    print(l)
-    
-    
-to_strings({1:2,3:4})
+def to_strings(x):
+    """
+    >>> to_strings({1:2})
+    ['1:2']
+    >>> to_strings({})
+    []
+    >>> to_strings({1:2,3:4})
+    ['1:2', '3:4']
+    """
+    return [str(i)+":"+str(j) for i,j in zip(x.keys(),x.values())]
 
 
 # Question 5
 
+def extremites(x):
+    """
+    >>> extremites(['a', 'b', 'c', 'd', 'e'])
+    ['a', 'b', 'd', 'e']
+    """
+    return x[0:2]+x[-2:]
 
-
-def extremites(liste1):
-    liste1
-    liste2 = []
-    k= len(liste1)
-    j = k-2
-    for i in 2 :
-        liste2 += liste1[i]
-    for j in k : 
-        liste2 += liste1[j]
-    liste2
-    
-extremites(['a', 'b', 'c', 'd', 'e'])
-        
 
 # Question 6 :
 
+class Mot:
+    """
+    >>> mot = Mot('Bonjour')
+    >>> mot.mot
+    'Bonjour'
+    >>> mot.comptelettre('o')
+    2
+    >>> mot.comptelettre('B') == mot.comptelettre('b') == 1
+    True
+    """
+    def __init__(self, mot):
+        self.mot = mot
 
-
-class Mot :
-    mot=''
-    def comptelettre(self,carat,mot):
-        x = mot.upper()
-        counter = 0
-        for carat1 in x:
-            if carat1 == 'carat' :
-                counter += + 1
-        print(counter)
-        # ou 
-        # list(mot.split())
-        # if 'carat' in len(list):
-        #     counter +=1
+    def comptelettre(self, caract):
+        return self.mot.count(caract.lower())+ self.mot.count(caract.upper())
         
 
 # Question 7 : 
 
 
 
-def tri_et_inverse(liste1) :
-    liste2 = []
-    liste3 = []
-    liste2.append(liste1.sort())
-    liste3.append(reversed(liste1))
-    liste = liste2 + liste3
-    liste
+def tri_et_inverse(x) :
+    """
+    >>> maliste = [4,7,6]
+    >>> tri_et_inverse(maliste)
+    ([4, 6, 7], [6, 7, 4])
+    >>> maliste == [4,7,6]
+    True
+    """
+    return (list.sort(x),list.reverse(x))
 
-tri_et_inverse([4,7,6])
-
-
+"""
 
 # Question 8 :
 
@@ -121,6 +117,9 @@ def aller_a_paris(input_call=input):
     while True:
         return 0, 'Nulle Part'
       
+ """       
+        
+        
 if __name__ == "__main__":
     import doctest
     if True:
