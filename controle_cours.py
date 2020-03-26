@@ -17,7 +17,7 @@ def sup21(x):
     >>> sup21(2)
     False
     """
-    return x>=21
+    return x >= 21
 
 
 # Question 2 :
@@ -32,7 +32,7 @@ def pairs(x):
 
 # Question 3 :
 
-def ajout4(x):
+def ajout4(li):
     """
     >>> ajout4([])
     [4]
@@ -43,7 +43,7 @@ def ajout4(x):
     >>> l
     [1, 2, 3]
     """
-    return x+[4]
+    return li.append(4)
 
 
 # Question 4 :
