@@ -87,15 +87,15 @@ fonctions1 = { "somme":[np.sum(x) for x in d['serie1']],
                         "maximum": [np.max(x) for x in d['serie1']],
                         "minimum": [np.min(x) for x in d['serie1']],
                         "écart-type": [np.std(x) for x in d['serie1']]}
-plt.axhline(fonctions1['somme'], color="blue")
+plt.axhline(fonctions1['somme'], color="blue",linestyle='--')
 
 fonctions2 = { "somme":[np.sum(x) for x in d['serie2']],
                         "moyenne": [np.mean(x) for x in d['serie2']],
                         "maximum": [np.max(x) for x in d['serie2']],
                         "minimum": [np.min(x) for x in d['serie2']],
                         "écart-type": [np.std(x) for x in d['serie2']]}
-plt.axhline(fonctions2['somme'], color="orange")
+plt.axhline(fonctions2['somme'], color="orange",linestyle='--')
 """
-plt.axhline(xm, color="blue")
-plt.axhline(ym, color="orange")
+plt.axhline(xm, color="blue",linestyle='--')
+plt.axhline(ym, color="orange",linestyle='--')
 plt.show()
