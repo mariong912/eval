@@ -73,9 +73,28 @@ xm = sum(df['serie1'])/len(df['serie1'])
 ym = sum(df['serie2'])/len(df['serie2'])
 
 # On cherche à representer graphiquement les 2 series du dictionnaires
+# La couleur bleu représente la série 1
+# La couleur orange représenta la série 2
 plt.plot(x) 
 plt.plot(y)
 # En ajoutant la moyenne de chacune de ces séries qui est calculé au dessus mais également dans la moyenne par serie/colonne
+
+"""
+# Pour choisir l'indicateur à montrer sur le graphique (mais nemarche pas)
+fonctions1 = { "somme":[np.sum(x) for x in d['serie1']],
+                        "moyenne": [np.mean(x) for x in d['serie1']],
+                        "maximum": [np.max(x) for x in d['serie1']],
+                        "minimum": [np.min(x) for x in d['serie1']],
+                        "écart-type": [np.std(x) for x in d['serie1']]}
+plt.axhline(fonctions1['somme'], color="blue")
+
+fonctions2 = { "somme":[np.sum(x) for x in d['serie2']],
+                        "moyenne": [np.mean(x) for x in d['serie2']],
+                        "maximum": [np.max(x) for x in d['serie2']],
+                        "minimum": [np.min(x) for x in d['serie2']],
+                        "écart-type": [np.std(x) for x in d['serie2']]}
+plt.axhline(fonctions2['somme'], color="orange")
+"""
 plt.axhline(xm, color="blue")
 plt.axhline(ym, color="orange")
 plt.show()
