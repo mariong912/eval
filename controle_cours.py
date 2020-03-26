@@ -69,11 +69,11 @@ def extremites(x):
     """
     return x[0:2]+x[-2:]
 
-
+"""
 # Question 6 :
 
 class Mot:
-    """
+    
     >>> mot = Mot('Bonjour')
     >>> mot.mot
     'Bonjour'
@@ -81,13 +81,14 @@ class Mot:
     2
     >>> mot.comptelettre('B') == mot.comptelettre('b') == 1
     True
-    """
+    
     def __init__(self, mot):
-        self.mot = mot
+        x = mot
+        self.mot = x.upper()
 
     def comptelettre(self, caract):
-        return self.mot.count(caract.lower())+ self.mot.count(caract.upper())
-        
+        return self.mot.count(caract)
+"""        
 
 # Question 7 : 
 
